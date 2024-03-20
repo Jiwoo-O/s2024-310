@@ -2,3 +2,60 @@ h1 {
     /* 수평 중앙 정렬하기 */
     text-align: center;
   }
+
+  body {
+    padding-top: 56px; /* 네비게이션 바 높이만큼 여백 추가 */
+}
+
+.navbar {
+    margin-bottom: 20px; /* 네비게이션 바의 아래 여백 추가 */
+}
+
+.container {
+    margin-top: 20px; /* 컨텐츠 상단 여백 추가 */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    height: 90%;
+    max-width: 800px; /* 팝업창 최대 너비 수정 */
+    max-height: 70vh; /* 화면 높이의 70%로 설정 */
+    overflow-y: auto; /* 세로 스크롤 추가 */
+    z-index: 1;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 이미지 스타일 추가 */
+#eventImage {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px; /* 이미지 위 여백 추가 */
+}
+#eventImage2 {
+    max-width: 100%; /* 이미지의 최대 너비를 설정하여 모달에 맞춤 */
+    height: auto; /* 높이는 자동으로 조정되도록 설정 */
+    display: block; /* 이미지를 블록 요소로 설정하여 다른 내용과 겹치지 않게 함 */
+    margin: 0 auto; /* 이미지를 가운데 정렬 */
+}
