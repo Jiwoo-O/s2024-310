@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>2024 3-10</title>
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 사용자 정의 CSS -->
+    <!-- FullCalendar CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <!-- FullCalendar 한국어 로케일 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/ko.js"></script>
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        body {
+            padding-top: 56px; /* 네비게이션 바 높이만큼 여백 추가 */
+        }
+
+        .navbar {
+            margin-bottom: 20px; /* 네비게이션 바의 아래 여백 추가 */
+        }
+
+        .container {
+            margin-top: 20px; /* 컨텐츠 상단 여백 추가 */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fefefe;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 70%;
+            height: 90%;
+            max-width: 800px; /* 팝업창 최대 너비 수정 */
+            max-height: 70vh; /* 화면 높이의 70%로 설정 */
+            overflow-y: auto; /* 세로 스크롤 추가 */
+            z-index: 1;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 이미지 스타일 추가 */
+        #eventImage {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px; /* 이미지 위 여백 추가 */
+        }
+        #eventImage2 {
+            max-width: 100%; /* 이미지의 최대 너비를 설정하여 모달에 맞춤 */
+            height: auto; /* 높이는 자동으로 조정되도록 설정 */
+            display: block; /* 이미지를 블록 요소로 설정하여 다른 내용과 겹치지 않게 함 */
+            margin: 0 auto; /* 이미지를 가운데 정렬 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">3학년 10반</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#홈">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#일정">일정</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 컨텐츠 -->
+    <div class="container">
+        <div class="alert alert-primary" role="alert">
+            <h1 id="홈"><br>河己失音(하기실음) 官頭登可(관두등가)</h1>
+            <h1><br></h1>
+        </div>
+        <br>
+        <div id="calendar" class="mb-4"></div>
+    <div id="eventDetailsModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="eventTitle"></h2>
+        <p id="eventDescription"></p>
+        <!-- 이미지 표시를 위한 img 요소 추가 -->
+        <img id="eventImage" src="" alt="Event Image" />
+        <!-- 두 번째 이미지 -->
+        <img id="eventImage2" src="" alt="Event Image2" />
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                // 한국어 로케일 설정
+                locale: 'ko',
+                firstDay: 1, // 월요일부터 시작
+                aspectRatio: 0.8, // 세로 길이를 가로 길이의 0.8로 설정
+                events: [
+                    // 수행평가
+                    {
+                        title: '융합과학 수행평가 타임라인',
+                        start: '2024-03-07',
+                        end: '2024-03-09',
+                        description: '탄소 중립 탐구 활동',
+                        image: 'images/융합과학_탄소중립.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '융과 3-6 제출 마감',
+                        start: '2024-03-21',
+                        description: '-',
+                        image: 'images/융합과학_탄소중립.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '융과 3-10 제출 마감',
+                        start: '2024-03-20',
+                        description: '-',
+                        image: 'images/융합과학_탄소중립.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '융과 3-6 발표 시작',
+                        start: '2024-03-25',
+                        description: '-',
+                        image: 'images/융합과학_탄소중립.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '융과 3-10 발표 시작',
+                        start: '2024-03-22',
+                        description: '-',
+                        image: 'images/융합과학_탄소중립.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '생II 실험보고서',
+                        start: '2024-03-25',
+                        end: '2024-03-30',
+                        description: '막을 통한 물질의 이동',
+                        image: 'images/생2_실험보고서.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '언매 주제신문',
+                        start: '2024-03-30',
+                        description: '3월 3주 시작',
+                        image: 'images/언매_독서신문.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '영독 문장완성 1차',
+                        start: '2024-04-02',
+                        end: '2024-04-04',
+                        description: '1~4강, 어순배열 4문항 포함',
+                        image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '영독 문장완성 2차',
+                        start: '2024-04-16',
+                        end: '2024-04-18',
+                        description: '5~8강, 어순배열 4문항 포함',
+                        image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '영독 문장완성 3차',
+                        start: '2024-05-21',
+                        end: '2024-05-23',
+                        description: '추후공지, 어순배열 4문항 포함',
+                        image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '영독 문장완성 4차',
+                        start: '2024-06-11',
+                        end: '2024-06-13',
+                        description: '추후공지, 어순배열 4문항 포함',
+                        image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '영독 PRESENTATION',
+                        start: '2024-03-25',
+                        end: '2024-04-06',
+                        description: '3/25~4/5 수업 중 4시간',
+                        image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '현세변 주제탐구글쓰기1',
+                        start: '2024-04-11',
+                        description: '20점',
+                        image: 'images/현세변_주제탐구글쓰기1-1.jpg',
+                        image2: 'images/현세변_주제탐구글쓰기1-2.jpg' // 이미지 경로 추가
+                    },
+
+                    // 모의고사 일정
+                    {
+                        title: '3모',
+                        start: '2024-03-28',
+                        description: '서울특별시교육청'
+                    },
+                    {
+                        title: '5모',
+                        start: '2024-04-08',
+                        description: '경기도교육청'
+                    },
+                    {
+                        title: '6모',
+                        start: '2024-06-04',
+                        description: '대학수학능력시험 모의평가'
+                    },
+                    {
+                        title: '7모',
+                        start: '2024-07-11',
+                        description: '인천광역시교육청'
+                    },
+                    {
+                        title: '9모',
+                        start: '2024-09-04',
+                        description: '대학수학능력시험 모의평가'
+                    },
+                    {
+                        title: '10모',
+                        start: '2024-10-15',
+                        description: '서울특별시교육청'
+                    },
+                    {
+                        title: '2024 수능',
+                        start: '2024-11-14',
+                        description: '대학수학능력시험'
+                    },
+                ],
+                eventClick: function (event, jsEvent, view) {
+                    showEventDetails(event);
+                }
+            });
+
+            // 헤더의 영어 텍스트를 한국어로 변환
+            moment.locale('ko');
+        });
+
+        function showEventDetails(event) {
+            $('#eventTitle').text(event.title);
+            $('#eventDescription').text(event.description);
+            // 이미지 경로가 있을 경우에만 이미지를 표시
+            if (event.image) {
+                $('#eventImage').attr('src', event.image).show();
+            } else {
+                $('#eventImage').hide();
+            } // 첫 번째 이미지
+            if (event.image2) {
+                $('#eventImage2').attr('src', event.image2).show();
+            } else {
+                $('#eventImage2').hide();
+            } // 두 번째 이미지
+            $('#eventDetails').text('이벤트 세부 내용: ' + event.description);
+
+            $('#eventDetailsModal').css('display', 'block');
+        }
+
+        function closeModal() {
+            $('#eventDetailsModal').css('display', 'none');
+        }
+    </script>
+
+    <br>
+    <div class="alert alert-primary" role="alert">
+         <a href="https://open.kakao.com/o/sv31HMfg" target="_blank">3-10 건의함 바로가기</a>
+         <br>
+         <a href="#" target="_blank">학교 홈페이지 바로가기</a>
+    </div>
+
+    <!-- 부트스트랩 JS 및 추가적인 JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js
