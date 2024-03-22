@@ -70,14 +70,15 @@
         <br>
         <br>
         <div id="calendar" class="mb-4"></div>
-    <div id="eventDetailsModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="eventTitle"></h2>
-        <p id="eventDescription"></p>
-        <!-- 이미지 표시를 위한 img 요소 추가 -->
-        <img id="eventImage" src="" alt="Event Image" />
-        <!-- 두 번째 이미지 -->
-        <img id="eventImage2" src="" alt="Event Image2" />
+        <div id="eventDetailsModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="eventTitle"></h2>
+            <p id="eventDescription"></p>
+            <!-- 이미지 표시를 위한 img 요소 추가 -->
+            <img id="eventImage" src="" alt="Event Image" />
+            <!-- 두 번째 이미지 -->
+            <img id="eventImage2" src="" alt="Event Image2" />
+        </div>
     </div>
 
     <script>
@@ -109,7 +110,7 @@
                     },
                     {
                         title: '융과 3-10 제출 마감',
-                        start: '2024-03-20',
+                        start: '2024-03-21',
                         description: '-',
                         image: 'images/융합과학_탄소중립.jpg' // 이미지 경로 추가
                     },
@@ -121,7 +122,7 @@
                     },
                     {
                         title: '융과 3-10 발표 시작',
-                        start: '2024-03-22',
+                        start: '2024-03-27',
                         description: '-',
                         image: 'images/융합과학_탄소중립.jpg' // 이미지 경로 추가
                     },
@@ -129,12 +130,18 @@
                         title: '생II 실험보고서',
                         start: '2024-03-25',
                         end: '2024-03-30',
-                        description: '막을 통한 물질의 이동',
+                        description: '막을 통한 물질의 이동 / 장소: 과학실',
                         image: 'images/생2_실험보고서.jpg' // 이미지 경로 추가
                     },
                     {
-                        title: '언매 주제신문',
-                        start: '2024-03-30',
+                        title: '언매 주제신문 1차시',
+                        start: '2024-03-27',
+                        description: '3월 3주 시작',
+                        image: 'images/언매_독서신문.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '언매 주제신문 2차시',
+                        start: '2024-03-29',
                         description: '3월 3주 시작',
                         image: 'images/언매_독서신문.jpg' // 이미지 경로 추가
                     },
@@ -167,27 +174,40 @@
                         image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
                     },
                     {
-                        title: '영독 PRESENTATION',
+                        title: '영독 발표 1차시',
                         start: '2024-03-25',
-                        end: '2024-04-06',
                         description: '3/25~4/5 수업 중 4시간',
                         image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
                     },
                     {
-                        title: '현세변 주제탐구글쓰기1',
+                        title: '영독 발표 2차시',
+                        start: '2024-03-27',
+                        description: '3/25~4/5 수업 중 4시간',
+                        image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
+                    },
+                    {
+                        title: '현세변 주제탐구글쓰기-1',
                         start: '2024-04-11',
                         description: '20점',
                         image: 'images/현세변_주제탐구글쓰기1-1.jpg',
                         image2: 'images/현세변_주제탐구글쓰기1-2.jpg' // 이미지 경로 추가
                     },
                     {
-                        title: '공학 발표',
-                        start: '2024-03-22'
+                        title: '공학일반 발표-1',
+                        start: '2024-03-22',
+                        description: '-'
                     },
                     {
-                        title: '프밍 논술',
+                        title: '공학일반 발표-2',
+                        start: '2024-03-26',
+                        description: '-'
+                    },
+                    {
+                        title: '프밍 주제탐구',
                         start: '2024-03-25',
-                        description: '장소: 3-10 교실'
+                        description: '장소: 3-10 교실',
+                        image: 'images/프밍_주제탐구-1.jpg',
+                        image2: 'images/프밍_주제탐구-2.jpg'
                     },
 
                     // 모의고사 일정
@@ -226,6 +246,142 @@
                         start: '2024-11-14',
                         description: '대학수학능력시험'
                     },
+
+                    // 학사일정
+                    {
+                        title: '1차 지필',
+                        start: '2024-04-29',
+                        end: '2024-05-03',
+                        description: '-'
+                    },
+                    {
+                        title: '개교기념일',
+                        start: '2024-05-03',
+                        description: '-'
+                    },
+                    {
+                        title: '대체휴무일',
+                        start: '2024-05-06',
+                        description: '-'
+                    },
+                    {
+                        title: '1, 2학년 체육대회',
+                        start: '2024-05-10',
+                        description: '-'
+                    },
+                    {
+                        title: '부처님오신날',
+                        start: '2024-05-15',
+                        description: '-'
+                    },
+                    {
+                        title: '진로탐색의날',
+                        start: '2024-05-14',
+                        description: '-'
+                    },
+                    {
+                        title: '국회의원 선거',
+                        start: '2024-04-10',
+                        description: '-'
+                    },
+                    {
+                        title: '현충일',
+                        start: '2024-06-06',
+                        description: '-'
+                    },
+                    {
+                        title: '재량휴업일',
+                        start: '2024-06-07',
+                        description: '-'
+                    },
+                    {
+                        title: '2차 지필',
+                        start: '2024-07-01',
+                        end: '2024-07-06',
+                        description: '-'
+                    },
+                    {
+                        title: '학교자율과정',
+                        start: '2024-07-15',
+                        end: '2024-07-20',
+                        description: '-'
+                    },
+                    {
+                        title: '방학식',
+                        start: '2024-07-22',
+                        description: '-'
+                    },
+                    {
+                        title: '개학식',
+                        start: '2024-08-14',
+                        description: '-'
+                    },
+                    {
+                        title: '광복절',
+                        start: '2024-07-15',
+                        description: '-'
+                    },
+                    {
+                        title: '추석 연휴',
+                        start: '2024-09-16',
+                        end: '2024-09-19',
+                        description: '-'
+                    },
+                    {
+                        title: '개천절',
+                        start: '2024-10-03',
+                        description: '-'
+                    },
+                    {
+                        title: '한글날',
+                        start: '2024-10-09',
+                        description: '-'
+                    },
+                    {
+                        title: '1, 2학년 1차 지필',
+                        start: '2024-10-14',
+                        end: '2024-10-18',
+                        description: '-'
+                    },
+                    {
+                        title: '1 2학년 체험학습',
+                        start: '2024-10-23',
+                        end: '2024-1-26',
+                        description: '-'
+                    },
+                    {
+                        title: '3학년 지필',
+                        start: '2024-10-28',
+                        end: '2024-11-01',
+                        description: '-'
+                    },
+                    {
+                        title: '1, 2학년 2차 지필',
+                        start: '2024-12-16',
+                        end: '2024-12-21',
+                        description: '-'
+                    },
+                    {
+                        title: '크리스마스',
+                        start: '2024-12-25',
+                        description: '-'
+                    },
+                    {
+                        title: '학교자율과정',
+                        start: '2024-12-30',
+                        end: '2024-01-041',
+                        description: '-'
+                    },
+                    {
+                        title: '신정',
+                        start: '2025-01-01',
+                        description: '-'
+                    },
+                    {
+                        title: '졸업식',
+                        start: '2025-01-07',
+                        description: '-'
+                    },
                 ],
                 eventClick: function (event, jsEvent, view) {
                     showEventDetails(event);
@@ -262,23 +418,232 @@
 
     <br>
 
-    <div class="alert alert-primary" role="alert" id="입시">
-        <h2>입시 자료실</h2>
+    <br>
+
+    <div class="container">
+        <div class="alert alert-primary" role="alert" id="입시" style="text-align: center;">
+            <h2><입시 자료실></h2>
+    
+            <!-- 자료실 -->
+            <div id="board-입시" class="board" style="text-align: center;">
+    
+                <!-- 페이지 1 -->
+                <div class="page" id="page1-입시" style="text-align: center;">
+
+                    <div class="board-item" onclick="openNewModal('입시', ['images/수시정시판단기준.png'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">수시와 정시 지원 판단 기준</h3>
+                        <img src="images/수시정시판단기준.png" style="width: 60px;">
+                    </div>
+
+                    <div class="board-item" onclick="openNewModal('입시', ['images/모의고사_일정.png'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">2024 모의고사 일정</h3>
+                        <img src="images/모의고사_일정.png" style="width: 60px;">
+                    </div>
+
+                    <div class="board-item" onclick="openNewModal('입시', ['images/교과종합등급차.png'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">학생부 교과전형 vs 학생부 종합전형의 자연 등급 차이</h3>
+                        <img src="images/교과종합등급차.png" style="width: 60px;">
+                    </div>
+    
+                    <div class="board-item" onclick="openNewModal('입시', ['images/교과컷1.png', 'images/교과컷2.png', 'images/교과컷3.png'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px">2023 교과전형 커트라인</h3>
+                        <img src="images/교과컷1.png" alt="내신 점수 별 커트라인" style="width: 60px;">
+                    </div>
+    
+                    <!-- 추가 이미지 -->
+    
+                </div>
+    
+                <!-- 페이지 2 -->
+                <div class="page" id="page2-입시" style="text-align: center;">
+                    <!-- 페이지 2의 내용 -->
+                    
+
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/추가이미지.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px">추가 이미지</h3>
+                        <img src="images/추가이미지.jpg" alt="추가 이미지" style="width: 60px;">
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- 페이지네이션 -->
+            <nav>
+                <ul id="pagination-입시" class="pagination justify-content-center">
+                    <!-- 페이지 버튼이 자동으로 생성될 것입니다. -->
+                </ul>
+            </nav>
+    
+            <!-- 새로운 모달 -->
+            <div id="newModal-입시" class="modal">
+                <span class="close" onclick="closeNewModal('입시')">&times;</span>
+                <div class="modal-content" id="imageContainer-입시"></div>
+            </div>
+        </div>
+    
         <br>
-        <a>업데이트 예정</a>
+    
+        <div class="alert alert-primary" role="alert" id="숙지" style="text-align: center;">
+            <h2><숙지 자료실></h2>
+    
+            <!-- 자료실 -->
+            <div id="board-숙지" class="board" style="text-align: center;">
+    
+                <!-- 페이지 1 -->
+                <div class="page" id="page1-숙지" style="text-align: center;">
+    
+                    <div class="board-item" onclick="openNewModal('입시', ['images/교육과정지원단.png'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">교육과정 학생지원단</h3>
+                        <img src="images/교육과정지원단.png" style="width: 60px;">
+                    </div>
+
+                    <div class="board-item" onclick="openNewModal('입시', ['images/봉사활동안내-1.jpg', 'images/봉사활동안내-2.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">2024 학생봉사활동 안내</h3>
+                        <img src="images/봉사활동안내-1.jpg" alt="봉사활동안내" style="width: 60px;">
+                    </div>
+
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/학년특색.png'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">학년 특색 프로그램</h3>
+                        <img src="images/학년특색.png" style="width: 60px;">
+                    </div>
+
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/사제동행.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">사제동행 독서토론</h3>
+                        <img src="images/사제동행.jpg" style="width: 60px;">
+                    </div>
+
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/1학기_청소구역.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">1학기 청소구역</h3>
+                        <img src="images/1학기_청소구역.jpg" alt="1학기 청소구역" style="width: 60px;">
+                    </div>
+    
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/나도전문가.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px">나도 전문가</h3>
+                        <img src="images/나도전문가.jpg" style="width: 60px;">
+                    </div>
+    
+                    <!-- 추가 이미지 -->
+    
+                </div>
+    
+                <!-- 페이지 2 -->
+                <div class="page" id="page2-숙지" style="text-align: center;">
+                    <!-- 페이지 2의 내용 -->
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/추가이미지.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px">추가 이미지</h3>
+                        <img src="images/추가이미지.jpg" alt="추가 이미지" style="width: 60px;">
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- 페이지네이션 -->
+            <nav>
+                <ul id="pagination-숙지" class="pagination justify-content-center">
+                    <!-- 페이지 버튼이 자동으로 생성될 것입니다. -->
+                </ul>
+            </nav>
+    
+            <!-- 새로운 모달 -->
+            <div id="newModal-숙지" class="modal">
+                <span class="close" onclick="closeNewModal('숙지')">&times;</span>
+                <div class="modal-content" id="imageContainer-숙지"></div>
+            </div>
+        </div>
     </div>
+    
+    <script>
+        var currentPage = 1;
+        var itemsPerPage = 10; // 한 페이지당 보여질 아이템 수
+        var totalItems = document.querySelectorAll('.board-item').length; // 전체 아이템 수
+        var totalPages = Math.ceil(totalItems / itemsPerPage); // 전체 페이지 수
+    
+        function showPage(page, id) {
+            var pages = document.querySelectorAll('#board-' + id + ' .page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById('page' + page + '-' + id).style.display = 'block';
+            currentPage = page;
+        }
+    
+        // 페이지 버튼 생성
+        function createPagination(id) {
+            var pagination = document.getElementById('pagination-' + id);
+            pagination.innerHTML = ""; // 이전 페이지 버튼 제거
+            for (var i = 1; i <= totalPages; i++) {
+                var li = document.createElement('li');
+                var button = document.createElement('button');
+                button.textContent = i;
+                button.className = 'page-link';
+                button.onclick = function() {
+                    showPage(parseInt(this.textContent), id);
+                };
+                li.className = 'page-item';
+                li.appendChild(button);
+                pagination.appendChild(li);
+            }
+        }
+    
+        // 페이지 버튼 숨기기
+        function hideEmptyPageButtons(id) {
+            var pages = document.querySelectorAll('#board-' + id + ' .page');
+            for (var i = 0; i < pages.length; i++) {
+                var page = pages[i];
+                var items = page.querySelectorAll('.board-item');
+                if (items.length === 0) {
+                    var pageNumber = parseInt(page.id.replace('page', ''));
+                    var button = document.querySelector('#pagination-' + id + ' button:nth-child(' + pageNumber + ')');
+                    if (button) {
+                        button.style.display = 'none';
+                    }
+                }
+            }
+        }
+    
+        // 초기 페이지 표시
+        function initializePages() {
+            var pages = document.querySelectorAll('.page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            showPage(1, '입시');
+            showPage(1, '숙지');
+        }
+    
+        initializePages();
+        createPagination('입시');
+        createPagination('숙지');
+        hideEmptyPageButtons('입시');
+        hideEmptyPageButtons('숙지');
+    
+        // 새로운 모달 열기
+        function openNewModal(id, imageSrcArray) {
+            var modal = document.getElementById("newModal-" + id);
+            var modalContent = document.getElementById("imageContainer-" + id);
+            modal.style.display = "block";
+            modalContent.innerHTML = ""; // 모달 내용 초기화
+    
+            // 이미지 배열을 순회하며 이미지 요소 추가
+            imageSrcArray.forEach(function(imageSrc) {
+                var img = document.createElement("img");
+                img.src = imageSrc;
+                modalContent.appendChild(img);
+            });
+        }
+    
+        // 새로운 모달 닫기
+        function closeNewModal(id) {
+            var modal = document.getElementById("newModal-" + id);
+            modal.style.display = "none";
+        }
+    </script>
+    
+    
 
     <br>
 
-    <div class="alert alert-primary" role="alert" id="숙지">
-        <h2>숙지 자료실</h2>
-        <br>
-        <a>업데이트 예정</a>
-    </div>
-
-    <br>
-
-    <div class="alert alert-primary" role="alert" id="링크">
+    <div class="alert alert-primary" role="alert" id="링크" style="text-align: center;">
          <a href="https://open.kakao.com/o/sv31HMfg" target="_blank">3-10 건의함 바로가기</a>
          <br>
          <a href="#" target="_blank">학교 홈페이지 바로가기</a>
