@@ -18,6 +18,9 @@
     <!-- FullCalendar JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <!-- hammer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
 
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/310-favicon.ico" />
@@ -637,6 +640,17 @@
             var modal = document.getElementById("newModal-" + id);
             modal.style.display = "none";
         }
+
+        // 핀치 줌
+        // 모달 이미지를 선택합니다.
+        var modalImage = document.querySelector(".modal-content img");
+
+        // 핀치 줌을 적용할 모달 이미지에 Hammer를 초기화합니다.
+        var hammer = new Hammer(modalImage);
+
+        // 핀치 이벤트를 감지하여 확대/축소합니다.
+        hammer.get("pinch").set({ enable: true });
+
     </script>
     
     
