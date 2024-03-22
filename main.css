@@ -20,24 +20,24 @@ h1 {
     z-index: 1; /* 다른 요소들보다 낮은 값 설정 */
 }
 
-.fc-header-toolbar {
-    font-size: 20px;
-}
-.fc-header-toolbar h2 {
-    font-size: 40px;
-}
-.fc-header-toolbar h3 {
-    font-size: 20px; /* 풀캘린더 헤더 텍스트의 글꼴 크기를 조정합니다. */
-}
+/* PC 환경에서 풀캘린더 텍스트 크기 조절 */
+@media (min-width: 768px) {
+    .fc-header-toolbar,
+    .fc-header-toolbar h3 {
+        font-size: 16px; /* PC 환경에서 풀캘린더 헤더 텍스트의 글꼴 크기를 조정합니다. */
+    }
+    .fc-header-toolbar h2 {
+        font-size: 24px;
+    }
 
-.fc-content,
-.fc-content table,
-.fc-content table th,
-.fc-content table td,
-.fc-day-header {
-    font-size: 16px; /* 풀캘린더 일정 텍스트의 글꼴 크기를 조정합니다. */
+    .fc-content,
+    .fc-content table,
+    .fc-content table th,
+    .fc-content table td,
+    .fc-day-header {
+        font-size: 18px; /* PC 환경에서 풀캘린더 일정 텍스트의 글꼴 크기를 조정합니다. */
+    }
 }
-
 
 
 
