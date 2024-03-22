@@ -641,25 +641,6 @@
             modal.style.display = "none";
         }
 
-        // 핀치 줌
-            // 이미지 요소를 선택합니다.
-            var zoomableImage = document.querySelector('.zoomable-image');
-
-            // Hammer 라이브러리를 사용하여 이미지에 터치 제스처를 적용합니다.
-            var hammer = new Hammer(zoomableImage);
-
-            // 핀치 이벤트를 활성화합니다.
-            hammer.get('pinch').set({ enable: true });
-
-            // 이미지를 확대 또는 축소하는 함수를 정의합니다.
-            function scaleImage(scale) {
-                zoomableImage.style.transform = 'scale(' + scale + ')';
-            }
-
-            // 핀치 이벤트가 발생할 때 이미지를 확대 또는 축소합니다.
-            hammer.on('pinch', function(event) {
-                scaleImage(event.scale);
-            });
 
     </script>
     
