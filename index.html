@@ -497,7 +497,7 @@
     
                     <div class="board-item" onclick="openNewModal('입시', ['images/교육과정지원단.png'])" style="display: flex; justify-content: center; align-items: center;">
                         <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">교육과정 학생지원단</h3>
-                        <img src="images/교육과정지원단.png" style="width: 60px;">
+                        <img src="images/교육과정지원단.png" style="width: 60px;" class="zoomable-image">
                     </div>
 
                     <div class="board-item" onclick="openNewModal('입시', ['images/봉사활동안내-1.jpg', 'images/봉사활동안내-2.jpg'])" style="display: flex; justify-content: center; align-items: center;">
@@ -642,17 +642,24 @@
         }
 
         // 핀치 줌
-        // 모바일 장치에서만 핀치 줌 기능을 사용합니다.
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            // 모달 이미지를 선택합니다.
-            var modalImage = document.querySelector(".modal-content img");
+            // 이미지 요소를 선택합니다.
+            var zoomableImage = document.querySelector('.zoomable-image');
 
-            // 핀치 줌을 적용할 모달 이미지에 Hammer를 초기화합니다.
-            var hammer = new Hammer(modalImage);
+            // Hammer 라이브러리를 사용하여 이미지에 터치 제스처를 적용합니다.
+            var hammer = new Hammer(zoomableImage);
 
-            // 핀치 이벤트를 감지하여 확대/축소합니다.
-            hammer.get("pinch").set({ enable: true });
-    }
+            // 핀치 이벤트를 활성화합니다.
+            hammer.get('pinch').set({ enable: true });
+
+            // 이미지를 확대 또는 축소하는 함수를 정의합니다.
+            function scaleImage(scale) {
+                zoomableImage.style.transform = 'scale(' + scale + ')';
+            }
+
+            // 핀치 이벤트가 발생할 때 이미지를 확대 또는 축소합니다.
+            hammer.on('pinch', function(event) {
+                scaleImage(event.scale);
+            });
 
     </script>
     
