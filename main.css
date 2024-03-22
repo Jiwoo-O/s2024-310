@@ -35,7 +35,7 @@ h1 {
     .fc-content table th,
     .fc-content table td,
     .fc-day-header {
-        font-size: 18px; /* PC 환경에서 풀캘린더 일정 텍스트의 글꼴 크기를 조정합니다. */
+        font-size: 17px; /* PC 환경에서 풀캘린더 일정 텍스트의 글꼴 크기를 조정합니다. */
     }
 }
 
