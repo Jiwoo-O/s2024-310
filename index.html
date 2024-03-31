@@ -40,6 +40,35 @@
 </head>
 <body>
 
+    <!-- 비밀번호 입력 모달 -->
+<div id="passwordModal" class="modal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-content">
+        <h2>비밀번호를 입력하세요</h2>
+        <input type="password" id="passwordInput">
+        <button onclick="authenticate()">확인</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // 비밀번호 입력 모달 열기
+        $('#passwordModal').modal('show');
+    });
+
+    function authenticate() {
+        var password = document.getElementById("passwordInput").value;
+        if (password === "6534") {
+            $('#passwordModal').modal('hide'); // 비밀번호가 맞으면 모달 닫기
+        } else {
+            alert("잘못된 비밀번호입니다.");
+        }
+    }
+
+    function closeModal() {
+        $('#passwordModal').modal('hide');
+    }
+</script>
+
     <!-- 네비게이션 바 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">3학년 10반</a>
@@ -150,8 +179,7 @@
                     },
                     {
                         title: '영독 문장완성 1차',
-                        start: '2024-04-02',
-                        end: '2024-04-04',
+                        start: '2024-04-03',
                         description: '1~4강, 어순배열 4문항 포함',
                         image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
                     },
@@ -177,13 +205,13 @@
                         image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
                     },
                     {
-                        title: '영독 발표 1차시',
+                        title: '영독 발표자료 1차시',
                         start: '2024-03-25',
                         description: '3/25~4/5 수업 중 4시간',
                         image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
                     },
                     {
-                        title: '영독 발표 2차시',
+                        title: '영독 발표자료 2차시',
                         start: '2024-03-27',
                         description: '3/25~4/5 수업 중 4시간',
                         image: 'images/영독작_수행평가.jpg' // 이미지 경로 추가
@@ -212,6 +240,55 @@
                         image: 'images/프밍_주제탐구-1.jpg',
                         image2: 'images/프밍_주제탐구-2.jpg'
                     },
+                    // 2024-03-31
+                    {
+                        title: '공학일반 논술',
+                        start: '2024-04-05',
+                        description: '-',
+                        image: 'images/공학일반_수행평가.jpg'
+                    },
+                    {
+                        title: '독서 수행 1차시',
+                        start: '2024-04-01',
+                        description: '-',
+                        image: 'images/독서_수행평가.jpg'
+                    },
+                    {
+                        title: '독서 수행 2차시',
+                        start: '2024-04-02',
+                        description: '-',
+                        image: 'images/독서_수행평가.jpg'
+                    },
+                    {
+                        title: '독서 수행 3차시',
+                        start: '2024-04-08',
+                        description: '-',
+                        image: 'images/독서_수행평가.jpg'
+                    },
+                    {
+                        title: '물II 수행평가',
+                        start: '2024-04-02',
+                        description: '-',
+                        image: 'images/물2_수행평가.jpg'
+                    },
+                    {
+                        title: '영독 발표 1차시',
+                        start: '2024-04-01',
+                        description: '3/25~4/5 수업 중 4시간',
+                        image: 'images/영독작_수행평가.jpg'
+                    },
+                    {
+                        title: '언매 주제신문 3차시',
+                        start: '2024-04-03',
+                        description: '3월 3주 시작',
+                        image: 'images/언매_독서신문.jpg'
+                    },
+                    {
+                        title: '생II 실험보고서(개인)',
+                        start: '2024-04-03',
+                        description: '막을 통한 물질의 이동',
+                        image: 'images/생2_실험보고서.jpg' // 이미지 경로 추가
+                    },
 
                     // 모의고사 일정
                     {
@@ -221,7 +298,7 @@
                     },
                     {
                         title: '5모',
-                        start: '2024-04-08',
+                        start: '2024-05-08',
                         description: '경기도교육청'
                     },
                     {
@@ -467,7 +544,7 @@
                     <!-- 페이지 2의 내용 -->
                     
 
-                    <div class="board-item" onclick="openNewModal('숙지', ['images/추가이미지.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                    <div class="board-item" onclick="openNewModal('입시', ['images/추가이미지.jpg'])" style="display: flex; justify-content: center; align-items: center;">
                         <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px">추가 이미지</h3>
                         <img src="images/추가이미지.jpg" alt="추가 이미지" style="width: 60px;">
                     </div>
@@ -500,12 +577,17 @@
                 <!-- 페이지 1 -->
                 <div class="page" id="page1-숙지" style="text-align: center;">
     
-                    <div class="board-item" onclick="openNewModal('입시', ['images/3학년교과서001.png'])" style="display: flex; justify-content: center; align-items: center;">
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/독서_1차지필.jpg', 'images/영독작_1차지필.jpg'])" style="display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: 24px; margin-bottom: 0; margin-right: 10px;">중간고사 시험범위</h3>
+                        <img src="images/영독작_1차지필.jpg" style="width: 60px;" class="zoomable-image">
+                    </div>
+
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/3학년교과서001.png'])" style="display: flex; justify-content: center; align-items: center;">
                         <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">3학년 교과서 안내</h3>
                         <img src="images/3학년교과서001.png" style="width: 60px;" class="zoomable-image">
                     </div>
 
-                    <div class="board-item" onclick="openNewModal('입시', ['images/교육과정지원단.png'])" style="display: flex; justify-content: center; align-items: center;">
+                    <div class="board-item" onclick="openNewModal('숙지', ['images/교육과정지원단.png'])" style="display: flex; justify-content: center; align-items: center;">
                         <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">교육과정 학생지원단</h3>
                         <img src="images/교육과정지원단.png" style="width: 60px;" class="zoomable-image">
                     </div>
@@ -519,6 +601,14 @@
                         <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">학년 특색 프로그램</h3>
                         <img src="images/학년특색.png" style="width: 60px;">
                     </div>
+    
+                    <!-- 추가 이미지 -->
+    
+                </div>
+    
+                <!-- 페이지 2 -->
+                <div class="page" id="page2-숙지" style="text-align: center;">
+                    <!-- 페이지 2의 내용 -->
 
                     <div class="board-item" onclick="openNewModal('숙지', ['images/사제동행.jpg'])" style="display: flex; justify-content: center; align-items: center;">
                         <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px;">사제동행 독서토론</h3>
@@ -533,18 +623,6 @@
                     <div class="board-item" onclick="openNewModal('숙지', ['images/나도전문가.jpg'])" style="display: flex; justify-content: center; align-items: center;">
                         <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px">나도 전문가</h3>
                         <img src="images/나도전문가.jpg" style="width: 60px;">
-                    </div>
-    
-                    <!-- 추가 이미지 -->
-    
-                </div>
-    
-                <!-- 페이지 2 -->
-                <div class="page" id="page2-숙지" style="text-align: center;">
-                    <!-- 페이지 2의 내용 -->
-                    <div class="board-item" onclick="openNewModal('숙지', ['images/추가이미지.jpg'])" style="display: flex; justify-content: center; align-items: center;">
-                        <h3 style="font-size: 17px; margin-bottom: 0; margin-right: 10px">추가 이미지</h3>
-                        <img src="images/추가이미지.jpg" alt="추가 이미지" style="width: 60px;">
                     </div>
                 </div>
     

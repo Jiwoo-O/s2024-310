@@ -154,10 +154,15 @@ h1 {
         overflow-x: auto; /* 수평 스크롤 추가 */
         overflow-y: auto; /* 수직 스크롤 추가 */
         -webkit-overflow-scrolling: touch; /* iOS에서 스크롤 부드럽게 처리 */
+        font-size: 14px;
     }
 
     .modal img {
         max-width: 100%; /* 이미지가 모달 창의 너비를 초과하면 이미지 크기 조정 */
+    }
+
+    .modal-body {
+        font-size: 14px; /* 원하는 크기로 조정 */
     }
 }
 
