@@ -110,6 +110,8 @@
             <img id="eventImage" src="" alt="Event Image" />
             <!-- 두 번째 이미지 -->
             <img id="eventImage2" src="" alt="Event Image2" />
+            <!-- 세 번째 이미지 -->
+            <img id="eventImage3" src="" alt="Event Image3" />
         </div>
     </div>
 
@@ -366,25 +368,25 @@
                         title: '기하 주제탐구 자료조사',
                         start:   '2024-06-14',
                         description: '-',
-                        image: '기하_주제탐구.jpg'
+                        image: 'images/기하_주제탐구.jpg'
                     },
                     {
                         title: '기하 주제탐구 보고서',
                         start:   '2024-06-21',
                         description: '-',
-                        image: '기하_주제탐구.jpg'
+                        image: 'images/기하_주제탐구.jpg'
                     },
                     {
                         title: '독서 감상적읽기',
                         start:   '2024-06-10',
                         description: '-',
-                        image: '독서_감상적읽기.jpg'
+                        image: 'images/독서_감상적읽기.jpg'
                     },
                     {
                         title: '프로그래밍 코드업 수행',
                         start:   '2024-06-13',
                         description: '-',
-                        image: '프밍_코드업.jpg'
+                        image: 'images/프밍_코드업.jpg'
                     },
                     {
                         title: '프로그래밍 보고서 제출 마감',
@@ -405,19 +407,19 @@
                         title: '화작 토론 입론서',
                         start:   '2024-05-20',
                         description: '-',
-                        image: '화작_토론.jpg'
+                        image: 'images/화작_토론.jpg'
                     },
                     {
                         title: '물II 진로 프로젝트(3-9)',
                         start:   '2024-06-11',
                         description: '-',
-                        image: '물2_진로.jpg'
+                        image: 'images/물2_진로.jpg'
                     },
                     {
                         title: '물II 진로 프로젝트(3-8)',
                         start:   '2024-06-14',
                         description: '-',
-                        image: '물2_진로.jpg'
+                        image: 'images/물2_진로.jpg'
                     },
                     //20240609
                     {
@@ -429,7 +431,7 @@
                         title: '미적분 그래프 개형 수행',
                         start:   '2024-06-14',
                         description: '-',
-                        image: '미적분_그래프.jpg'
+                        image: 'images/미적분_그래프.jpg'
                     },
                     {
                         title: '언매 논술 수행',
@@ -445,6 +447,78 @@
                         title: '물II PPT 제출',
                         start:   '2024-06-16',
                         description: '-'
+                    },
+
+                    //2학기 240818
+                    {
+                        title: '영독 수행평가',
+                        start:   '2024-08-29',
+                        description: '-',
+                        image: 'images/영독829-1.jpg',
+                        image2: 'images/영독829-2.jpg'
+                    },
+                    {
+                        title: '프밍 수행평가',
+                        start:   '2024-08-21',
+                        description: '-'
+                    },
+                    {
+                        title: '생II 수행평가',
+                        start:   '2024-08-21',
+                        end: '2024-08-24',
+                        description: '-',
+                        image: 'images/생2_2학기수행.jpg'
+                    },
+                    {
+                        title: '기하 발표',
+                        start: '2024-08-20',
+                        end: '2024-08-24',
+                        description: '-',
+                        image: 'images/기하_주제탐구발표.jpg'
+                    },
+                    {
+                        title: '수탐 자료조사(1)',
+                        start: '2024-08-19',
+                        description: '-',
+                        image: 'images/수탐1.jpg',
+                        image2: 'images/수탐2.jpg',
+                        image3: 'images/수탐3.jpg'
+                    },
+                    {
+                        title: '수탐 자료조사(2)',
+                        start: '2024-08-21',
+                        description: '-',
+                        image: 'images/수탐1.jpg',
+                        image2: 'images/수탐2.jpg',
+                        image3: 'images/수탐3.jpg'
+                    },
+                    {
+                        title: '수탐 3차시 작성',
+                        start: '2024-08-22',
+                        description: '-',
+                        image: 'images/수탐1.jpg',
+                        image2: 'images/수탐2.jpg',
+                        image3: 'images/수탐3.jpg'
+                    },
+                    {
+                        title: '수탐 4차시 작성',
+                        start: '2024-08-26',
+                        description: '-',
+                        image: 'images/수탐1.jpg',
+                        image2: 'images/수탐2.jpg',
+                        image3: 'images/수탐3.jpg'
+                    },
+                    {
+                        title: '수탐 개념과제탐구',
+                        start: '2024-08-23',
+                        description: '-',
+                        image: 'images/수탐2.jpg'
+                    },
+                    {
+                        title: '물II 실험탐구',
+                        start: '2024-08-23',
+                        description: '-',
+                        image: 'images/물2_실험탐구.jpg'
                     },
 
 
@@ -648,6 +722,11 @@
             } else {
                 $('#eventImage2').hide();
             } // 두 번째 이미지
+            if (event.image3) {
+                $('#eventImage3').attr('src', event.image3).show();
+            } else {
+                $('#eventImage3').hide();
+            } // 세 번째 이미지
             $('#eventDetails').text('이벤트 세부 내용: ' + event.description);
 
             $('#eventDetailsModal').css('display', 'block');
